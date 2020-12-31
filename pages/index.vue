@@ -1,27 +1,8 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
-      <Form />
       <h1 class="title">tsubaki</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <Form />
     </div>
   </div>
 </template>
@@ -33,6 +14,11 @@ import Form from '~/components/Form.vue'
 export default Vue.extend({
   components: {
     Form,
+  },
+  data() {
+    return {
+      isLogin: false as boolean,
+    }
   },
 })
 </script>
